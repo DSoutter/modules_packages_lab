@@ -1,15 +1,21 @@
 # from modules.task_list import *
+# print("1st import")
 from data.task_list import *
+# print("2nd import")
 from modules.output import *
+# print("3rd import")
 from modules.input import *
 
+# print("the begining")
 while (True):
+    # print("are we here")
     print_menu()
     # option = input("Select an option 1, 2, 3, 4, 5 or (Q)uit: ")
     options()
+    print(options())
     if options() == 'q':
         break
-    if option == '1':
+    if options() == '1':
         print_list(tasks)
     elif options() == '2':
         print_list(get_uncompleted_tasks(tasks))
